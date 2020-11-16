@@ -9,21 +9,23 @@
 </template>
 
 <script>
-export default {
-name: "Header"
-}
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "Header"
+});
 </script>
 
 <style scoped>
-  .navbar {
-    margin-top: 1em;
-  }
+.navbar {
+  margin-top: 1em;
+}
 
-  h1 {
-    font-weight: bold;
-  }
+h1 {
+  font-weight: bold;
+}
 
-  .header-link {
-    color: black;
-  }
+.header-link {
+  color: black;
+}
 </style>
