@@ -7,23 +7,25 @@
           {{ series.status }}
         </span>
       </div>
-
     </div>
     <div class="card-body">
       <div v-bind:key="item.id" v-for="item in series.items">
-        <p>{{ item.name }} <span class="badge badge-pill badge-warning"> {{ item.status }}</span></p>
+        <p>
+          {{ item.name }}
+          <span class="badge badge-pill badge-warning"> {{ item.status }}</span>
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "SeriesItem",
-  props: ["series"],
-}
+  props: ["series"]
+});
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
