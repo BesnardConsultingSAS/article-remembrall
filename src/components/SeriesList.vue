@@ -4,7 +4,7 @@
   </div>
 
   <div v-bind:key="item.id" v-for="item in series" class="seriesList">
-    <SeriesItem v-bind:series="item" />
+    <SeriesItem v-bind:seriesItem="item" />
   </div>
 </template>
 

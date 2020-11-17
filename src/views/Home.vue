@@ -18,44 +18,237 @@ export default defineComponent({
         {
           id: 1,
           title: "Django Testing",
-          status: "Not Started",
-          items: [
+          status: "Done",
+          articles: [
             {
               id: 1,
-              name: "Script Writing",
-              status: "Done"
+              title: "Django Testing #1 - Create tests using Pytest",
+              status: "Done",
+              items: [
+                {
+                  id: 1,
+                  name: "Script Writing",
+                  status: "Done"
+                },
+                {
+                  id: 2,
+                  name: "Video Recording",
+                  status: "Done"
+                },
+                {
+                  id: 3,
+                  name: "Video Editing",
+                  status: "Done"
+                },
+                {
+                  id: 4,
+                  name: "Video Annotations",
+                  status: "Done"
+                },
+                {
+                  id: 5,
+                  name: "Youtube publishing",
+                  status: "Done"
+                },
+                {
+                  id: 6,
+                  name: "Article Writing",
+                  status: "Done"
+                }
+              ]
             },
             {
               id: 2,
-              name: "Video Recording",
-              status: "Done"
+              title: "Django Testing #2 - Introduction to Factory Boy",
+              status: "In Progress",
+              items: [
+                {
+                  id: 1,
+                  name: "Script Writing",
+                  status: "Done"
+                },
+                {
+                  id: 2,
+                  name: "Video Recording",
+                  status: "Done"
+                },
+                {
+                  id: 3,
+                  name: "Video Editing",
+                  status: "In Progress"
+                },
+                {
+                  id: 4,
+                  name: "Video Annotations",
+                  status: "Not Started"
+                },
+                {
+                  id: 5,
+                  name: "Youtube publishing",
+                  status: "Not Started"
+                },
+                {
+                  id: 6,
+                  name: "Article Writing",
+                  status: "Not Started"
+                }
+              ]
             },
             {
               id: 3,
-              name: "Article Writing",
-              status: "In Progress"
+              title:
+                "Django Testing #3 - Generating Random Datasets with Factory Boy",
+              status: "In Progress",
+              items: [
+                {
+                  id: 1,
+                  name: "Script Writing",
+                  status: "Done"
+                },
+                {
+                  id: 2,
+                  name: "Video Recording",
+                  status: "Done"
+                },
+                {
+                  id: 3,
+                  name: "Video Editing",
+                  status: "In Progress"
+                },
+                {
+                  id: 4,
+                  name: "Video Annotations",
+                  status: "Not Started"
+                },
+                {
+                  id: 5,
+                  name: "Youtube publishing",
+                  status: "Not Started"
+                },
+                {
+                  id: 6,
+                  name: "Article Writing",
+                  status: "Not Started"
+                }
+              ]
             }
           ]
         },
         {
           id: 2,
           title: "Git Series",
-          status: "In Progress",
-          items: [
+          status: "Not Started",
+          articles: [
             {
               id: 1,
-              name: "Script Writing",
-              status: "Done"
+              title: "Git Series #1 - How to Rebase",
+              status: "Done",
+              items: [
+                {
+                  id: 1,
+                  name: "Script Writing",
+                  status: "Done"
+                },
+                {
+                  id: 2,
+                  name: "Video Recording",
+                  status: "Done"
+                },
+                {
+                  id: 3,
+                  name: "Video Editing",
+                  status: "Done"
+                },
+                {
+                  id: 4,
+                  name: "Video Annotations",
+                  status: "Done"
+                },
+                {
+                  id: 5,
+                  name: "Youtube publishing",
+                  status: "Done"
+                },
+                {
+                  id: 6,
+                  name: "Article Writing",
+                  status: "Done"
+                }
+              ]
             },
             {
               id: 2,
-              name: "Video Recording",
-              status: "Done"
+              title: "Git Series #2 - How to Cherry Pick",
+              status: "In Progress",
+              items: [
+                {
+                  id: 1,
+                  name: "Script Writing",
+                  status: "Done"
+                },
+                {
+                  id: 2,
+                  name: "Video Recording",
+                  status: "Done"
+                },
+                {
+                  id: 3,
+                  name: "Video Editing",
+                  status: "In Progress"
+                },
+                {
+                  id: 4,
+                  name: "Video Annotations",
+                  status: "Not Started"
+                },
+                {
+                  id: 5,
+                  name: "Youtube publishing",
+                  status: "Not Started"
+                },
+                {
+                  id: 6,
+                  name: "Article Writing",
+                  status: "Not Started"
+                }
+              ]
             },
             {
               id: 3,
-              name: "Article Writing",
-              status: "In Progress"
+              title: "Git Series #3 - How to Update branch",
+              status: "In Progress",
+              items: [
+                {
+                  id: 1,
+                  name: "Script Writing",
+                  status: "Done"
+                },
+                {
+                  id: 2,
+                  name: "Video Recording",
+                  status: "Done"
+                },
+                {
+                  id: 3,
+                  name: "Video Editing",
+                  status: "In Progress"
+                },
+                {
+                  id: 4,
+                  name: "Video Annotations",
+                  status: "Not Started"
+                },
+                {
+                  id: 5,
+                  name: "Youtube publishing",
+                  status: "Not Started"
+                },
+                {
+                  id: 6,
+                  name: "Article Writing",
+                  status: "Not Started"
+                }
+              ]
             }
           ]
         }
