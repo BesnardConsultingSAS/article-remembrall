@@ -2,18 +2,15 @@
   <div class="card">
     <div class="card-header">
       <div class="d-flex justify-content-between">
-        <a href="">{{ series.title }}</a>
-        <span v-bind:class="seriesStatus" class="badge badge-pill">
-          {{ series.status }}
+        <a href="">{{ seriesItem.title }}</a>
+        <span v-bind:class="seriesStatus" class="badge d-inline-flex align-items-center">
+          {{ seriesItem.status }}
         </span>
       </div>
     </div>
     <div class="card-body">
-      <div v-bind:key="item.id" v-for="item in series.items">
-        <p>
-          {{ item.name }}
-          <span class="badge badge-pill badge-warning"> {{ item.status }}</span>
-        </p>
+      <div v-bind:key="article.id" v-for="article in seriesItem.articles">
+        <Article v-bind:article="article" />
       </div>
     </div>
   </div>
@@ -21,10 +18,13 @@
 
 <script>
 import { defineComponent } from "vue";
-
+import Article from "@/components/Article";
 export default defineComponent({
   name: "SeriesItem",
-  props: ["series"],
+  components: {
+    Article
+  },
+  props: ["seriesItem"],
   computed: {
     seriesStatus: function() {
       const seriesStatuses = {
@@ -34,7 +34,7 @@ export default defineComponent({
       };
 
       for (const key in seriesStatuses) {
-        if (this.series.status === key) {
+        if (this.seriesItem.status === key) {
           return seriesStatuses[key];
         }
       }
