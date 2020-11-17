@@ -3,7 +3,7 @@
     <div class="card-header">
       <div class="d-flex justify-content-between">
         <a href="">{{ series.title }}</a>
-        <span class="badge badge-pill badge-warning">
+        <span v-bind:class="seriesStatus" class="badge badge-pill">
           {{ series.status }}
         </span>
       </div>
@@ -24,7 +24,24 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "SeriesItem",
-  props: ["series"]
+  props: ["series"],
+  computed: {
+    seriesStatus: function() {
+      const seriesStatuses = {
+        "Not Started": "badge-dark",
+        "In Progress": "badge-warning",
+        Done: "badge-success"
+      };
+
+      for (const key in seriesStatuses) {
+        if (this.series.status === key) {
+          return seriesStatuses[key];
+        }
+      }
+
+      return "badge-success";
+    }
+  }
 });
 </script>
 

@@ -18,7 +18,7 @@ export default defineComponent({
         {
           id: 1,
           title: "Django Testing",
-          status: "Not started",
+          status: "Not Started",
           items: [
             {
               id: 1,
