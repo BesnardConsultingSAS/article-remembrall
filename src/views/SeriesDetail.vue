@@ -18,44 +18,51 @@
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.videoRecording"
           step-title="Script Writing"
-          v-bind:status="article.steps.scriptWriting.status"
+          to-component="ScriptWriting"
         />
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.videoRecording"
           step-title="Video Recording"
-          v-bind:status="article.steps.videoRecording.status"
+          to-component="VideoRecording"
         />
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.videoEditing"
           step-title="Video Editing"
-          v-bind:status="article.steps.videoEditing.status"
+          to-component="VideoEditing"
         />
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.videoAnnotations"
           step-title="Video Annotations"
-          v-bind:status="article.steps.videoAnnotations.status"
+          to-component="VideoAnnotations"
         />
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.videoPublishing"
           step-title="Video Publishing"
-          v-bind:status="article.steps.videoPublishing.status"
+          to-component="VideoPublishing"
         />
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.articleWriting"
           step-title="Article Writing"
-          v-bind:status="article.steps.articleWriting.status"
+          to-component="ArticleWriting"
         />
         <SeriesDetailItem
           v-bind:series="series"
           v-bind:article="article"
+          v-bind:step="article.steps.articlePublishing"
           step-title="Article Publishing"
-          v-bind:status="article.steps.articlePublishing.status"
+          to-component="ArticlePublishing"
         />
       </div>
     </div>
