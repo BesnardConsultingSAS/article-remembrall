@@ -1,6 +1,6 @@
 <template>
   <div class="article-item">
-    {{ item.name }}
+    {{ item.step }}
     <span v-bind:class="articleItemStatus" class="badge badge-pill">
       {{ item.status }}
     </span>
