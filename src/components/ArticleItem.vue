@@ -9,21 +9,16 @@
 
 <script>
 import { defineComponent } from "vue";
+import { BadgeStatus } from "@/data";
 
 export default defineComponent({
   name: "ArticleItem",
   props: ["item"],
   computed: {
     articleItemStatus: function() {
-      const articleItemStatuses = {
-        "Not Started": "badge-dark",
-        "In Progress": "badge-warning",
-        Done: "badge-success"
-      };
-
-      for (const key in articleItemStatuses) {
+      for (const key in BadgeStatus) {
         if (this.item.status === key) {
-          return articleItemStatuses[key];
+          return BadgeStatus[key];
         }
       }
 
