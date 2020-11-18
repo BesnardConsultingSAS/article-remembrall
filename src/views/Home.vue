@@ -14,7 +14,7 @@ export default defineComponent({
   },
   computed: {
     series() {
-      return this.$store.state.series
+      return this.$store.state.series;
     }
   }
 });
