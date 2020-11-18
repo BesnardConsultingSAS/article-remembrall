@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import { ArticleStep, Status } from "@/data";
 
 export default createStore({
   state: {
@@ -10,56 +11,56 @@ export default createStore({
         articles: [
           {
             title: "Django Testing #1: Create tests using Pytest",
-            status: "In Progress",
+            status: Status.IN_PROGRESS,
             items: [
               {
-                step: "Script Writing",
-                status: "Done"
+                step: ArticleStep.SCRIPT_WRITING,
+                status: Status.DONE
               },
               {
-                step: "Video Recording",
-                status: "Done"
+                step: ArticleStep.VIDEO_RECORDING,
+                status: Status.DONE
               },
               {
-                step: "Video Editing",
-                status: "Done"
+                step: ArticleStep.VIDEO_EDITING,
+                status: Status.DONE
               },
               {
-                step: "Video Annotations",
-                status: "Done"
+                step: ArticleStep.VIDEO_ANNOTATIONS,
+                status: Status.DONE
               },
               {
-                step: "Youtube Publishing",
-                status: "Done"
+                step: ArticleStep.YOUTUBE_PUBLISHING,
+                status: Status.DONE
               },
               {
-                step: "Article Writing",
-                status: "Done"
+                step: ArticleStep.SCRIPT_WRITING,
+                status: Status.DONE
               },
               {
-                step: "Article Publishing",
-                status: "Done"
+                step: ArticleStep.ARTICLE_PUBLISHING,
+                status: Status.IN_PROGRESS
               }
             ]
           },
           {
             title: "Django Testing #2: Introduction to Factory Boy",
-            status: "In Progress"
+            status: Status.NOT_STARTED
           }
         ]
       },
       {
         id: 2,
         title: "Git Series",
-        status: "Done",
+        status: Status.NOT_STARTED,
         articles: [
           {
             title: "Git Series #1: How to update branch",
-            status: "In Progress"
+            status: Status.NOT_STARTED
           },
           {
             title: "Git Series #2: How to rebase properly",
-            status: "In Progress"
+            status: Status.NOT_STARTED
           }
         ]
       }
