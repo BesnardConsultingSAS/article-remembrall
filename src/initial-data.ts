@@ -1,6 +1,6 @@
 import { Series, Status } from "@/data.ts";
 
-export const SeriesData: Series[] = [
+export const initialData: Series[] = [
   {
     id: 1,
     title: "Django Testing",

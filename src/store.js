@@ -1,8 +1,8 @@
 import { reactive, readonly } from "vue";
-import { SeriesData } from "./series";
+import { initialData } from "./initial-data";
 
 const state = reactive({
-  series: SeriesData
+  series: initialData
 });
 
 export default { state: readonly(state) };
