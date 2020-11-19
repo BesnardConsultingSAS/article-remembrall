@@ -9,12 +9,27 @@ export interface Article {
   id: number;
   title: string;
   status: string;
-  items: ArticleItem[];
+  steps: StepItem;
 }
 
-export interface ArticleItem {
-  step: string;
+export interface StepItem {
+  scriptWriting: StepItemDetail;
+  videoRecording: StepItemDetail;
+  videoEditing: StepItemDetail;
+  videoAnnotations: StepItemDetail;
+  videoPublishing: StepItemDetail;
+  articleWriting: StepItemDetail;
+  articlePublishing: StepItemDetail;
+}
+
+interface StepItemDetail {
   status: string;
+  resources: Resource[];
+}
+
+export interface Resource {
+  url: string;
+  name: string;
 }
 
 export enum ArticleStep {
