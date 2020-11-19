@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="step">
     <router-link
       :to="{
         name: toComponent,
@@ -10,13 +10,14 @@
           step: step
         }
       }"
+      class="step-link"
       >{{ stepTitle }}</router-link
     >
     <span
-      v-bind:class="stepsStatus"
-      class="badge d-inline-flex align-items-center"
+      v-bind:class="stepStatus(step.status)"
+      class="badge badge-pill d-inline-flex align-items-center"
     >
-      {{ status }}
+      {{ step.status }}
     </span>
   </div>
 </template>
@@ -27,23 +28,30 @@ import { BadgeStatus } from "@/data.ts";
 export default {
   name: "SeriesDetailItem",
   props: ["series", "article", "stepTitle", "step", "toComponent", "url"],
-  data: function() {
-    return {
-      status: this.step.status
-    };
-  },
-  computed: {
-    stepsStatus: function() {
+  setup() {
+    function stepStatus(status) {
       for (const key in BadgeStatus) {
-        if (this.step.status === key) {
+        if (status === key) {
           return BadgeStatus[key];
         }
       }
 
       return "badge-success";
     }
+
+    return {
+      stepStatus
+    };
   }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.step {
+  margin: 1em 0;
+}
+
+.step-link {
+  margin-right: 0.5em;
+}
+</style>
