@@ -18,7 +18,8 @@ export default defineComponent({
 
 <style scoped>
 .navbar {
-  margin-top: 1em;
+  margin-top: 2em;
+  padding: 0;
 }
 
 h1 {

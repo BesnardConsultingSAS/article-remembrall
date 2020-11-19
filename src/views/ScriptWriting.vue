@@ -1,10 +1,11 @@
 <template>
-  <h1>Script Writing</h1>
+  <h1>{{ stepTitle }}</h1>
 </template>
 
 <script>
 export default {
-  name: "ScriptWriting"
+  name: "ScriptWriting",
+  props: ["stepTitle"]
 };
 </script>
 

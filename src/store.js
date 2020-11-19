@@ -5,4 +5,14 @@ const state = reactive({
   series: initialData
 });
 
-export default { state: readonly(state) };
+const getSeriesById = function(id) {
+  const series = state.series.find(series => series.id === parseInt(id));
+
+  if (!series) {
+    return;
+  }
+
+  return series;
+};
+
+export default { state: readonly(state), getSeriesById };
