@@ -9,7 +9,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { BadgeStatus } from "@/data";
+import { BadgeStatus } from "../data/enums";
 export default defineComponent({
   name: "Article",
   props: ["article"],
