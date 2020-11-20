@@ -1,4 +1,5 @@
-import { Series, Status } from "@/data.ts";
+import { Series } from "./data/interfaces";
+import { Status } from "./data/enums";
 
 export const initialData: Series[] = [
   {

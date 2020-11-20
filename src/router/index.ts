@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-
+import { articleSteps } from "../data/data";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
@@ -21,50 +21,19 @@ const routes: Array<RouteRecordRaw> = [
     name: "SeriesDetail",
     component: () =>
       import(/* webpackChunkName: "series" */ "../views/SeriesDetail.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/script-writing",
-    name: "ScriptWriting",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ScriptWriting.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/video-recording",
-    name: "VideoRecording",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ArticleDetail.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/video-editing",
-    name: "VideoEditing",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ArticleDetail.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/video-annotations",
-    name: "VideoAnnotations",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ArticleDetail.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/video-publishing",
-    name: "VideoPublishing",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ArticleDetail.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/article-writing",
-    name: "ArticleWriting",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ArticleDetail.vue")
-  },
-  {
-    path: "/series/:id/article/:articleId/article-publishing",
-    name: "ArticlePublishing",
-    component: () =>
-      import(/* webpackChunkName: "series" */ "../views/ArticleDetail.vue")
   }
 ];
+
+articleSteps.forEach(function(step) {
+  routes.push({
+    path: `/series/:id/article/:articleId/${step.urlPath}`,
+    name: step.name,
+    component: () =>
+      import(
+        /* webpackChunkName: "series" */ `../views/${step.componentPath}.vue`
+      )
+  });
+});
 
 const router = createRouter({
   history: createWebHistory(),
