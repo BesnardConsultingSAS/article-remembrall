@@ -5,9 +5,7 @@
         name: toComponent,
         params: {
           id: series.id,
-          articleId: article.id,
-          title: stepTitle,
-          step: step
+          articleId: article.id
         }
       }"
       class="step-link"

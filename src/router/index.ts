@@ -27,7 +27,7 @@ const routes: Array<RouteRecordRaw> = [
 articleSteps.forEach(function(step) {
   routes.push({
     path: `/series/:id/article/:articleId/${step.urlPath}`,
-    name: step.name,
+    name: step.routeName,
     component: () =>
       import(
         /* webpackChunkName: "series" */ `../views/${step.componentPath}.vue`
