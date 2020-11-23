@@ -14,7 +14,7 @@
         v-bind:key="item.url"
         v-for="item in step.resources"
       >
-        <a href="{{ item.url }}">{{ item.name }}</a>
+        <a :href="item.url">{{ item.name }}</a>
       </li>
     </ul>
   </div>
