@@ -1,7 +1,7 @@
 <template>
   <div class="add-series">
     <h2>New Series</h2>
-    <form>
+    <form @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="seriesTitle">Series Title</label>
         <input
@@ -10,6 +10,7 @@
           id="seriesTitle"
           aria-describedby="series title"
           placeholder="Enter series title"
+          v-model="newSeriesTitle"
         />
       </div>
 
@@ -19,8 +20,32 @@
 </template>
 
 <script>
+import { inject, ref } from "vue";
+import { useRouter } from "vue-router";
+import { Status } from "../data/enums";
+
 export default {
-  name: "AddSeries"
+  name: "AddSeries",
+  setup() {
+    const store = inject("store");
+    const router = useRouter();
+
+    const newSeriesTitle = ref("");
+
+    const handleSubmit = () => {
+      store.addSeries({
+        title: newSeriesTitle.value,
+        status: Status.NOT_STARTED,
+        articles: []
+      });
+      router.push({ name: "Home" });
+    };
+
+    return {
+      handleSubmit,
+      newSeriesTitle
+    };
+  }
 };
 </script>
 

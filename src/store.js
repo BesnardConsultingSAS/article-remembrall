@@ -1,9 +1,15 @@
 import { reactive, readonly } from "vue";
 import { initialData } from "./initial-data";
+import { v4 as uuidv4 } from "uuid";
 
 const state = reactive({
   series: initialData
 });
+
+const addSeries = function(series) {
+  series.id = uuidv4();
+  state.series.push(series);
+};
 
 const getSeriesById = function(id) {
   const series = state.series.find(series => series.id === parseInt(id));
@@ -38,4 +44,4 @@ const getStep = function(seriesId, articleId, step) {
   }
 };
 
-export default { state: readonly(state), getSeriesById, getStep };
+export default { state: readonly(state), getSeriesById, getStep, addSeries };

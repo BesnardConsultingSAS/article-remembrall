@@ -1,9 +1,10 @@
 import { Series } from "./data/interfaces";
 import { Status } from "./data/enums";
+import { v4 as uuidv4 } from "uuid";
 
 export const initialData: Series[] = [
   {
-    id: 1,
+    id: uuidv4(),
     title: "Django Testing",
     status: "Done",
     articles: [
@@ -162,7 +163,7 @@ export const initialData: Series[] = [
     ]
   },
   {
-    id: 2,
+    id: uuidv4(),
     title: "Git Series",
     status: Status.NOT_STARTED,
     articles: [
