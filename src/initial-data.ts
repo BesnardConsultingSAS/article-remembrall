@@ -16,11 +16,11 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 1"
               },
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 2"
               }
             ]
@@ -29,8 +29,12 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
+              },
+              {
+                url: "http://www.test.com",
+                name: "Document 2"
               }
             ]
           },
@@ -38,7 +42,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -47,7 +51,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -56,7 +60,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -65,7 +69,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -74,7 +78,7 @@ export const initialData: Series[] = [
             status: Status.IN_PROGRESS,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -90,11 +94,11 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 1"
               },
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 2"
               }
             ]
@@ -103,7 +107,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -112,7 +116,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -121,7 +125,7 @@ export const initialData: Series[] = [
             status: Status.IN_PROGRESS,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -130,7 +134,7 @@ export const initialData: Series[] = [
             status: Status.NOT_STARTED,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -139,7 +143,7 @@ export const initialData: Series[] = [
             status: Status.NOT_STARTED,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -148,7 +152,7 @@ export const initialData: Series[] = [
             status: Status.NOT_STARTED,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -171,11 +175,11 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 1"
               },
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 2"
               }
             ]
@@ -184,7 +188,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -193,7 +197,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -202,7 +206,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -211,7 +215,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -220,7 +224,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -229,7 +233,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -245,11 +249,11 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 1"
               },
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Document 2"
               }
             ]
@@ -258,7 +262,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -267,7 +271,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -276,7 +280,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -285,7 +289,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -294,7 +298,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
@@ -303,7 +307,7 @@ export const initialData: Series[] = [
             status: Status.DONE,
             resources: [
               {
-                url: "www.test.com",
+                url: "http://www.test.com",
                 name: "Video 1.mp4"
               }
             ]
