@@ -1,4 +1,4 @@
-import { reactive, readonly } from "vue";
+import { reactive } from "vue";
 import { initialData } from "./initial-data";
 import { v4 as uuidv4 } from "uuid";
 
@@ -9,6 +9,14 @@ const state = reactive({
 const addSeries = function(series) {
   series.id = uuidv4();
   state.series.push(series);
+  console.log(initialData);
+  // initialData.push(series);
+  // initialData.push({
+  //   id: series.id,
+  //   title: series.title,
+  //   status: series.status,
+  //   articles: series.articles
+  // });
 };
 
 const getSeriesById = function(id) {
@@ -44,4 +52,4 @@ const getStep = function(seriesId, articleId, step) {
   }
 };
 
-export default { state: readonly(state), getSeriesById, getStep, addSeries };
+export default { state: state, getSeriesById, getStep, addSeries };
