@@ -31,6 +31,10 @@ export const initialData: Series[] = [
               {
                 url: "www.test.com",
                 name: "Video 1.mp4"
+              },
+              {
+                url: "www.test.com",
+                name: "Document 2"
               }
             ]
           },

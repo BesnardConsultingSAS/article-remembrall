@@ -15,4 +15,27 @@ const getSeriesById = function(id) {
   return series;
 };
 
-export default { state: readonly(state), getSeriesById };
+const getSingleArticleFromSeries = function(seriesId, articleId) {
+  const series = getSeriesById(seriesId);
+  const article = series.articles.find(
+    article => article.id === parseInt(articleId)
+  );
+
+  if (!article) {
+    return;
+  }
+
+  return article;
+};
+
+const getStep = function(seriesId, articleId, step) {
+  const article = getSingleArticleFromSeries(seriesId, articleId);
+
+  for (const key in article.steps) {
+    if (key == step) {
+      return article.steps[key];
+    }
+  }
+};
+
+export default { state: readonly(state), getSeriesById, getStep };

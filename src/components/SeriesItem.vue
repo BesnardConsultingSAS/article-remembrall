@@ -23,8 +23,9 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
-import Article from "@/components/Article";
+import { defineComponent, computed } from "vue";
+import Article from "../components/Article";
+import { Article as ArticleInterface } from "../data/interfaces";
 import { BadgeStatus } from "../data/enums";
 
 export default defineComponent({
@@ -32,17 +33,21 @@ export default defineComponent({
   components: {
     Article
   },
-  props: ["seriesItem"],
-  computed: {
-    seriesStatus: function() {
+  props: { seriesItem: ArticleInterface },
+  setup(props) {
+    const seriesStatus = computed(() => {
       for (const key in BadgeStatus) {
-        if (this.seriesItem.status === key) {
+        if (props.seriesItem.status === key) {
           return BadgeStatus[key];
         }
       }
 
       return "badge-success";
-    }
+    });
+
+    return {
+      seriesStatus
+    };
   }
 });
 </script>
