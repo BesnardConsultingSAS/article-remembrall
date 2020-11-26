@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-row-reverse">
-    <button class="btn btn-primary">ADD SERIES</button>
+    <button class="btn btn-primary" @click="goToAddSeries">ADD SERIES</button>
   </div>
 
   <div v-bind:key="item.id" v-for="item in series" class="seriesList">
@@ -12,13 +12,24 @@
 import { defineComponent } from "vue";
 
 import SeriesItem from "@/components/SeriesItem";
+import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "SeriesList",
   components: {
     SeriesItem
   },
-  props: ["series"]
+  props: ["series"],
+  setup() {
+    const router = useRouter();
+    const goToAddSeries = () => {
+      router.push({ name: "AddSeries" });
+    };
+
+    return {
+      goToAddSeries
+    };
+  }
 });
 </script>
 

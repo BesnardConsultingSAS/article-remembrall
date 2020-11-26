@@ -1,37 +1,51 @@
 export const articleSteps = [
   {
     urlPath: "script-writing",
-    name: "ScriptWriting",
-    componentPath: "ScriptWriting"
+    routeName: "ScriptWriting",
+    componentPath: "ScriptWriting",
+    stepKey: "scriptWriting",
+    stepTitle: "Script Writing"
   },
   {
     urlPath: "video-recording",
-    name: "VideoRecording",
-    componentPath: "ArticleDetail"
+    routeName: "VideoRecording",
+    componentPath: "ArticleDetail",
+    stepKey: "videoRecording",
+    stepTitle: "Video Recording"
   },
   {
     urlPath: "video-editing",
-    name: "VideoEditing",
-    componentPath: "ArticleDetail"
+    routeName: "VideoEditing",
+    componentPath: "ArticleDetail",
+    stepKey: "videoEditing",
+    stepTitle: "Video Editing"
   },
   {
     urlPath: "video-annotations",
-    name: "VideoAnnotations",
-    componentPath: "ArticleDetail"
+    routeName: "VideoAnnotations",
+    componentPath: "ArticleDetail",
+    stepKey: "videoAnnotations",
+    stepTitle: "Video Annnotations"
   },
   {
     urlPath: "video-publishing",
-    name: "VideoPublishing",
-    componentPath: "ArticleDetail"
+    routeName: "VideoPublishing",
+    componentPath: "ArticleDetail",
+    stepKey: "videoPublishing",
+    stepTitle: "Video Publishing"
   },
   {
     urlPath: "article-writing",
-    name: "ArticleWriting",
-    componentPath: "ArticleDetail"
+    routeName: "ArticleWriting",
+    componentPath: "ArticleDetail",
+    stepKey: "articleWriting",
+    stepTitle: "Article Writing"
   },
   {
     urlPath: "article-publishing",
-    name: "ArticlePublishing",
-    componentPath: "ArticleDetail"
+    routeName: "ArticlePublishing",
+    componentPath: "ArticleDetail",
+    stepKey: "articlePublishing",
+    stepTitle: "Article Publishing"
   }
 ];
