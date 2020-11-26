@@ -1,5 +1,5 @@
-import { Series } from "./data/interfaces";
-import { Status } from "./data/enums";
+import { Series } from "./interfaces/interfaces";
+import { Status } from "./enums/enums";
 
 export const initialData: Series[] = [
   {

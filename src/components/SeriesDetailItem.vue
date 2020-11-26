@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { BadgeStatus } from "../data/enums";
+import { BadgeStatus } from "../enums/enums";
 
 export default {
   name: "SeriesDetailItem",

@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import { BadgeStatus } from "../data/enums";
+import { BadgeStatus } from "../enums/enums";
 import { inject } from "vue";
 import { useRoute } from "vue-router";
 import SeriesDetailItem from "../components/SeriesDetailItem";

@@ -25,7 +25,7 @@
 <script>
 import { defineComponent } from "vue";
 import Article from "@/components/Article";
-import { BadgeStatus } from "../data/enums";
+import { BadgeStatus } from "../enums/enums";
 
 export default defineComponent({
   name: "SeriesItem",
