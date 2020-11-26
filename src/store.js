@@ -12,7 +12,7 @@ const addSeries = function(series) {
 };
 
 const getSeriesById = function(id) {
-  const series = state.series.find(series => series.id === parseInt(id));
+  const series = state.series.find(series => series.id === id);
 
   if (!series) {
     return;
