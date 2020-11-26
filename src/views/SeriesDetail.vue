@@ -1,6 +1,12 @@
 <template>
   <div class="series-detail">
-    <h2>{{ series.title }}</h2>
+    <div class="series-detail-header d-flex justify-content-between">
+      <h2>{{ series.title }}</h2>
+      <button class="btn btn-primary" @click="goToAddArticle">
+        ADD ARTICLE
+      </button>
+    </div>
+
     <div v-bind:key="article" v-for="article in series.articles">
       <div class="card">
         <div class="card-header">
@@ -31,7 +37,7 @@
 <script>
 import { BadgeStatus } from "../data/enums";
 import { inject } from "vue";
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import SeriesDetailItem from "../components/SeriesDetailItem";
 import { articleSteps } from "../data/data";
 export default {
@@ -39,10 +45,15 @@ export default {
   components: { SeriesDetailItem },
   setup() {
     const store = inject("store");
+    const router = useRouter();
     const route = useRoute();
 
     const { getSeriesById } = store;
     const series = getSeriesById(route.params.id);
+
+    const goToAddArticle = () => {
+      router.push({ name: "AddArticle" });
+    };
 
     function articleStatus(status) {
       for (const key in BadgeStatus) {
@@ -55,6 +66,7 @@ export default {
     }
 
     return {
+      goToAddArticle,
       articleSteps,
       series,
       articleStatus
@@ -64,7 +76,7 @@ export default {
 </script>
 
 <style scoped>
-h2 {
+.series-detail-header {
   margin-bottom: 1em;
 }
 .series-detail {
