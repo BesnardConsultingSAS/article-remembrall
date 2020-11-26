@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-import { articleSteps } from "../data/data";
+import { articleSteps } from "./article-steps";
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
