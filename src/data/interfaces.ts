@@ -1,5 +1,5 @@
 export interface Series {
-  id: number;
+  id: string;
   title: string;
   status: string;
   articles: Article[];
