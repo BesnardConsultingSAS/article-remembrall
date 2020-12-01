@@ -1,5 +1,5 @@
 export interface Series {
-  id: number;
+  id: string;
   title: string;
   status: string;
   articles: Article[];
@@ -30,4 +30,8 @@ interface StepItemDetail {
 export interface Resource {
   url: string;
   name: string;
+}
+
+export interface State {
+  series: Series[];
 }
