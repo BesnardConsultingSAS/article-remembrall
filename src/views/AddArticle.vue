@@ -20,16 +20,13 @@
 </template>
 
 <script>
-import { inject, ref } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import { Status } from "../data/enums";
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 export default {
   name: "AddArticle",
   setup() {
-    const store = inject("store");
     const router = useRouter();
-    const route = useRoute();
 
     const newArticleTitle = ref("");
 

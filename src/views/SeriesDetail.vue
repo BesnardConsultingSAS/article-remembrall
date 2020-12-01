@@ -6,30 +6,34 @@
         ADD ARTICLE
       </button>
     </div>
-
-    <div v-bind:key="article" v-for="article in series.articles">
-      <div class="card">
-        <div class="card-header">
-          <div class="d-flex justify-content-between">
-            {{ article.title }}
-            <span
-              v-bind:class="articleStatus(article.status)"
-              class="badge d-inline-flex align-items-center"
-            >
-              {{ article.status }}
-            </span>
+    <div v-if="series.articles.length > 0">
+      <div v-bind:key="article" v-for="article in series.articles">
+        <div class="card">
+          <div class="card-header">
+            <div class="d-flex justify-content-between">
+              {{ article.title }}
+              <span
+                v-bind:class="articleStatus(article.status)"
+                class="badge d-inline-flex align-items-center"
+              >
+                {{ article.status }}
+              </span>
+            </div>
           </div>
-        </div>
-        <div class="card-body">
-          <div :key="item.stepTitle" v-for="item in articleSteps">
-            <SeriesDetailItem
-              :series="series"
-              :article="article"
-              :step-mapper="item"
-            />
+          <div class="card-body">
+            <div :key="item.stepTitle" v-for="item in articleSteps">
+              <SeriesDetailItem
+                :series="series"
+                :article="article"
+                :step-mapper="item"
+              />
+            </div>
           </div>
         </div>
       </div>
+    </div>
+    <div v-else>
+      <p class="no-articles">No articles added into the series yet!</p>
     </div>
   </div>
 </template>
@@ -81,5 +85,10 @@ export default {
 }
 .series-detail {
   margin-top: 2em;
+}
+
+.no-articles {
+  font-weight: bold;
+  color: maroon;
 }
 </style>

@@ -31,3 +31,7 @@ export interface Resource {
   url: string;
   name: string;
 }
+
+export interface State {
+  series: Series[];
+}

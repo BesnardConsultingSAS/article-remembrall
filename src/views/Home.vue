@@ -1,12 +1,11 @@
 <template>
   <div class="home">
-    <SeriesList v-bind:series="store.state.series" />
+    <SeriesList v-bind:series="series" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { inject } from "vue";
+import { defineComponent, inject } from "vue";
 import SeriesList from "@/components/SeriesList.vue";
 export default defineComponent({
   name: "Home",
@@ -14,10 +13,12 @@ export default defineComponent({
     SeriesList
   },
   setup() {
-    const store = inject("store");
-
+    const store: any = inject("store");
+    const { setupInitialData, getParsedSeriesFromLocalStorage } = store;
+    setupInitialData();
+    const series = getParsedSeriesFromLocalStorage();
     return {
-      store
+      series
     };
   }
 });

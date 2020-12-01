@@ -2,17 +2,41 @@ import { reactive, readonly } from "vue";
 import { initialData } from "./initial-data";
 import { v4 as uuidv4 } from "uuid";
 
+const LOCAL_STORAGE_SERIES_KEY = "series";
+let seriesList = [];
+
+const setupInitialData = () => {
+  const seriesFromLocalStorage = localStorage.getItem(LOCAL_STORAGE_SERIES_KEY);
+  seriesList = seriesFromLocalStorage
+    ? JSON.parse(seriesFromLocalStorage)
+    : initialData;
+
+  localStorage.setItem(LOCAL_STORAGE_SERIES_KEY, JSON.stringify(seriesList));
+};
+
+const getParsedSeriesFromLocalStorage = () => {
+  const seriesFromLocalStorage = localStorage.getItem(LOCAL_STORAGE_SERIES_KEY);
+  return JSON.parse(seriesFromLocalStorage);
+};
+
 const state = reactive({
-  series: initialData
+  series: seriesList
 });
 
+const getSeriesList = () => {
+  return state.series;
+};
+
 const addSeries = function(series) {
+  const parsedSeries = getParsedSeriesFromLocalStorage();
   series.id = uuidv4();
-  state.series.push(series);
+  parsedSeries.push(series);
+  localStorage.setItem(LOCAL_STORAGE_SERIES_KEY, JSON.stringify(parsedSeries));
 };
 
 const getSeriesById = function(id) {
-  const series = state.series.find(series => series.id === id);
+  const parsedSeries = getParsedSeriesFromLocalStorage();
+  const series = parsedSeries.find(series => series.id === id);
 
   if (!series) {
     return;
@@ -44,4 +68,13 @@ const getStep = function(seriesId, articleId, step) {
   }
 };
 
-export default { state: readonly(state), getSeriesById, getStep, addSeries };
+export default {
+  state: readonly(state),
+  getSeriesById,
+  getStep,
+  addSeries,
+  getSeriesList,
+  setupInitialData,
+  LOCAL_STORAGE_SERIES_KEY,
+  getParsedSeriesFromLocalStorage
+};
