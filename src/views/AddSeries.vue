@@ -1,7 +1,7 @@
 <template>
   <div class="add-series">
     <h2>New Series</h2>
-    <form @submit.prevent="handleSubmit">
+    <form data-test="form" @submit.prevent="handleSubmit">
       <div class="form-group">
         <label for="seriesTitle">Series Title</label>
         <input
@@ -11,6 +11,7 @@
           aria-describedby="series title"
           placeholder="Enter series title"
           v-model="newSeriesTitle"
+          data-test="new-series-title"
         />
       </div>
 

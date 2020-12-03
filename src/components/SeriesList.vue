@@ -3,7 +3,12 @@
     <button class="btn btn-primary" @click="goToAddSeries">ADD SERIES</button>
   </div>
 
-  <div v-bind:key="item.id" v-for="item in series" class="seriesList">
+  <div
+    v-bind:key="item.id"
+    v-for="item in series"
+    data-test="series-list"
+    class="seriesList"
+  >
     <SeriesItem v-bind:seriesItem="item" />
   </div>
 </template>
